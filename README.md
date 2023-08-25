@@ -1,4 +1,5 @@
-![t1](https://github.com/KangminNa/CBC_MAIN2-main/assets/139530542/0f9e2974-ccd9-4f0d-bdb1-bc066a02e89f)
+
+![t1](https://github.com/KangminNa/CBC_MAIN2-main/assets/139530542/9b2a0373-ec22-450c-9004-33c820846aa2)
 
 # 서비스 내용
 
@@ -18,8 +19,9 @@
 - **서버**: Docker, Nginx, Linux
 - **하드웨어**: Raspberry pi, Arduino, Python, C
 
+![t2](https://github.com/KangminNa/CBC_MAIN2-main/assets/139530542/80e1c730-6874-430a-8892-42c869790971)
 
-![t2](https://github.com/KangminNa/CBC_MAIN2-main/assets/139530542/7f2c484a-d6a8-4983-b9d1-74fc54734620)
+
 
 
 # 개발 내용
@@ -44,7 +46,10 @@
     - 자체제작 자전거 거치대를 이용하여 거치대 주변 환경과 자전거가 거치 시 압력센서를 이용한 공기압 측정 기능을 제공해준다.
 - **안장가방**
     - 안장가방은 블랙박스 기능을 제공해주는 카메라, 주변환경을 제공해주는 여러 센서들로 구성되어 있다. 그 중 충격감지 센서로 사용자 라이딩 시 발생하는 충격을 실시간으로 받아올 수 있는 기능을 제공해 준다.
-![t3](https://github.com/KangminNa/CBC_MAIN2-main/assets/139530542/1f73d99b-861b-41ca-b94e-a5cb0ab539aa)
+    - 
+![t3](https://github.com/KangminNa/CBC_MAIN2-main/assets/139530542/6f295170-cb6b-4dd7-86e1-8df4aebc75dd)
+
+
 
 # 결과
 
