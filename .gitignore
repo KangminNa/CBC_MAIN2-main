@@ -224,7 +224,7 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # Ignore metadata files
-app/src/main/res
+app/src/main/AndroidManifest.xml
 
 
 
