@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="TODAY"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/todayMMDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvToday"
+        app:layout_constraintStart_toStartOf="@id/tvToday"
+        android:text="10월 21일"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        />
+
+    <View
+        android:id="@+id/viewTest2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/todayMMDD"
+        app:layout_constraintBottom_toTopOf="@id/weatherBox"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewTest"
+        app:layout_constraintTop_toTopOf="@id/viewTest2"
+        >
+        <TextView
+            android:id="@+id/tvWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날씨"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            tools:ignore="MissingConstraints" />
+        <ProgressBar
+            android:id="@+id/pbWeather"
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:progressDrawable="@drawable/custom_progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            app:layout_constraintStart_toEndOf="@+id/tvWeather"
+            app:layout_constraintBottom_toBottomOf="@id/tvWeather"
+            app:layout_constraintTop_toTopOf="@id/tvWeather"
+            android:layout_marginLeft="10dp"
+            android:progress="0"
+            android:max="30"
+            />
+        <ImageView
+            android:id="@+id/imgWeather"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/pbWeather"
+            app:layout_constraintTop_toTopOf="@id/pbWeather"
+            app:layout_constraintBottom_toBottomOf="@id/pbWeather"
+            android:src="@drawable/weather_icon"
+            />
+        <!--온도-->
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="온도"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@id/tvWeather"
+            app:layout_constraintTop_toBottomOf="@id/tvWeather"
+            tools:ignore="MissingConstraints" />
+        <ProgressBar
+            android:id="@+id/pbTemp"
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:progressDrawable="@drawable/custom_progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            app:layout_constraintStart_toEndOf="@+id/tvTemp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTemp"
+            app:layout_constraintTop_toTopOf="@id/tvTemp"
+            android:layout_marginLeft="10dp"
+            android:progress="0"
+            android:max="40"
+            />
+        <TextView
+            android:id="@+id/tvTemp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="27°"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@+id/pbTemp"
+            app:layout_constraintTop_toTopOf="@id/pbTemp"
+            app:layout_constraintBottom_toBottomOf="@id/pbTemp"
+            />
+
+        <!--습도-->
+        <TextView
+            android:id="@+id/tvHum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="습도"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@id/tvTemp"
+            app:layout_constraintTop_toBottomOf="@id/tvTemp"
+            tools:ignore="MissingConstraints" />
+        <ProgressBar
+            android:id="@+id/pbHum"
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:progressDrawable="@drawable/custom_progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            app:layout_constraintStart_toEndOf="@+id/tvHum"
+            app:layout_constraintBottom_toBottomOf="@id/tvHum"
+            app:layout_constraintTop_toTopOf="@id/tvHum"
+            android:layout_marginLeft="10dp"
+            android:progress="0"
+            android:max="100"
+            />
+        <TextView
+            android:id="@+id/tvHum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="50%"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@+id/pbHum"
+            app:layout_constraintTop_toTopOf="@id/pbHum"
+            app:layout_constraintBottom_toBottomOf="@id/pbHum"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewTest"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/horizonSV"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@id/btnRidingStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewTest"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/main_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_parking_mode"
+                />
+            <ImageView
+                android:id="@+id/main_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_map"
+                />
+            <ImageView
+                android:id="@+id/main_themeMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_distanation"
+                />
+            <ImageView
+                android:id="@+id/main_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_record"
+                />
+            <ImageView
+                android:id="@+id/main_repair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_repair"
+                />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRidingStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2A3759"
+        android:text="라이딩 시작"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:fontFamily="@font/nanumsquare_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

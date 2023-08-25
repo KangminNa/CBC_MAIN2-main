@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Detail.Detail1Fragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:textColor="#431D32"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="주행 기록" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarview"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_gravity="center_vertical"
+        app:mcv_selectionColor="#b7cb99"
+        app:mcv_showOtherDates="all"
+        app:mcv_leftArrow="@drawable/circle_left"
+        app:mcv_rightArrow="@drawable/circle_right"
+        app:mcv_headerTextAppearance="@style/HeaderText"
+        app:mcv_weekDayTextAppearance="@style/WeekText"
+        app:mcv_tileSize="match_parent"
+        app:mcv_tileWidth="45dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="60dp"
+        android:padding="5dp"
+        android:background="@drawable/memo_box">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.5"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="#AEB5C3"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:background="#00000000"
+                android:padding="7dp"
+                android:scaleType="fitXY"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:src="@drawable/ic_baseline_check_24" />
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="#00000000"
+                android:padding="7dp"
+                android:scaleType="fitXY"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:src="@drawable/ic_baseline_delete_24" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/memo_box"
+                android:ems="10"
+                android:layout_margin="10dp"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/green1"
+                android:fontFamily="@font/nanumsquare_regular"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/memo_box"
+                android:clickable="true"
+                android:ems="10"
+                android:layout_margin="10dp"
+                android:textColor="@color/green1"
+                android:textColorHint="@color/green1"
+                android:hint="기록이 없습니다."
+                android:lineSpacingExtra="10dp"
+                android:onClick="onTextViewClicked"
+                android:fontFamily="@font/nanumsquare_regular"
+                android:textSize="17sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/memo_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvspeed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/DiaryRecord"
+                    android:text="속도\n0km" />
+
+                <TextView
+                    android:id="@+id/tvtime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/DiaryRecord"
+                    android:text="달린 시간\n00 : 00 : 00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvdistance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/DiaryRecord"
+                    android:text="달린 거리\n0m" />
+
+                <TextView
+                    android:id="@+id/tvkcal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/DiaryRecord"
+                    android:text="칼로리\n0kcal" />
+            </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/memo_box">
+
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvshock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="라이딩 기록\n\n오늘 라이딩 동안 충격 횟수는 1회 입니다."
+                    style="@style/DiaryRecord"
+                    android:textSize="15sp"
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

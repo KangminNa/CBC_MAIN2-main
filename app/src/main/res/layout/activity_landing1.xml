@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".LandingActivity1">
+
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/landing_lottie"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:lottie_rawRes="@raw/landing_bicycle_ho"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        app:lottie_loop="false"-->
+<!--        android:visibility="visible"-->
+<!--        />-->
+
+    <ImageView
+        android:id="@+id/imgJasla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/landing1_logo1"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

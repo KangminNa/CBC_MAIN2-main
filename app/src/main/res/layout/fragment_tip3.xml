@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Tip3Fragment">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/tip_fg_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="210dp"
+        />
+
+    <View
+        android:id="@+id/linetest"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="280dp"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. 안장, 핸들바, 기타 체결 부분의 느슨한 너트나\n    볼트가 없는지 살펴본다."
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/linetest"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TipText"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. 쉬프터 케이블, 브레이크 케이블, 유압 호스 등이\n    닳지 않았는지 살핀다."
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        style="@style/TipText"
+        />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. 휠 베어링, 헤드 셋 베어링이 잘 맞는지 살핀다."
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        style="@style/TipText"
+        />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. 체인, 카세트, 디테일러를 살피고 윤활한다."
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        style="@style/TipText"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

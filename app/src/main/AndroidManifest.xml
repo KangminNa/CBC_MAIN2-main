@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDa-LmK43Y24rLdsxjxApu6GmkBovMDQUY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_cbc"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_cbc_round"
+        android:installLocation="preferExternal"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CBC_MAIN">
+
+
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParkingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RidingActivity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDa-LmK43Y24rLdsxjxApu6GmkBovMDQUY" />
+        <activity
+            android:name=".Detail.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".LandingActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RepairTipActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ThemeMapActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".LandingActivity1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

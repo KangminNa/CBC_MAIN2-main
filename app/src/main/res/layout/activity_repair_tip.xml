@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RepairTipActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="자전거 관리 일정\n잘 모르시겠나요?"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/green3"
+        android:fontFamily="@font/nanumsquare_bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="@id/tv1"
+        android:text="초보자분들을 위한 가이드가 준비되어 있습니다.\n자전거 사용기간에 따른 관리팁으로 안전한 라이딩되세요!"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanumsquare_regular"
+        android:layout_marginTop="20dp"
+        />
+
+    <View
+        android:id="@+id/tipBox"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:background="@drawable/tipbox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        app:tabIndicatorColor="#00FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/tipBox"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="30dp"
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/viewPager"
+        app:layout_constraintTop_toBottomOf="@id/tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

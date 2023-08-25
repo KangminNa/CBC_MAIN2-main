@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Tip1Fragment">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/tip_fg_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="210dp"
+        />
+
+    <View
+        android:id="@+id/linetest"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="280dp"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. 주먹으로 바퀴를 가볍게 쳐서 앞뒤 바퀴가 잘 붙어\n    있는지 검사하기"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/linetest"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TipText"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. 타이어에 바람이 잘 들어가있는지 검사하기\n    (자전거 공기압 체크 서비스 사용하기)"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        style="@style/TipText"
+        />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. 앞/뒷 브레이크의 제동력을 검사한다."
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        style="@style/TipText"
+        />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. 야간에 탄다면 전조등, 후미등의 불량 확인 및\n    충전상태 검사하기"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        style="@style/TipText"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
