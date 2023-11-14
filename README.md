@@ -13,7 +13,7 @@
 
 ---
 
-- **백엔드** : MySQL, Django
+- **백엔드** : MySQL, Django(https://github.com/KangminNa/python_jasla)
 - **프론트**: JS, Html, Css
 - **앱**: Kotlin, Android Studio
 - **서버**: Docker, Nginx, Linux
